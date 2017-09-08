@@ -6,8 +6,8 @@
 	<groupId>com.lwj</groupId>
 	<artifactId>wsp</artifactId>
 	<version>0.9</version>
-	<packaging>jar</packaging>
-	<!--<packaging>war</packaging>-->
+	<!--<packaging>jar</packaging>-->
+	<packaging>war</packaging>
 
 	<name>wsp</name>
 	<description>WSP for xdbigdata</description>
@@ -93,7 +93,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<!--<scope>provided</scope>-->
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -108,22 +108,22 @@
 				</configuration>
 			</plugin>
 
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-war-plugin</artifactId>-->
-				<!--<configuration>-->
-					<!--<webResources>-->
-						<!--<resource>-->
-							<!--<directory>${basedir}/lib</directory>-->
-							<!--<targetPath>WEB-INF/lib</targetPath>-->
-							<!--<filtering>true</filtering>-->
-							<!--<includes>-->
-								<!--<include>**/*.jar</include>-->
-							<!--</includes>-->
-						<!--</resource>-->
-					<!--</webResources>-->
-				<!--</configuration>-->
-			<!--</plugin>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>${basedir}/lib</directory>
+							<targetPath>WEB-INF/lib</targetPath>
+							<filtering>true</filtering>
+							<includes>
+								<include>**/*.jar</include>
+							</includes>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
